@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 function page() {
     const [file, setFile] = useState()
@@ -20,6 +21,22 @@ function page() {
     }
   }
   return (
+    <div>    {/* Navbar */}
+    <nav className="bg-blue-400 p-4 flex justify-between items-center">
+      <div className="text-white font-bold text-lg">NEXTAI</div>
+      <div className="space-x-4">
+        {/* <button className="px-4 py-2 text-white bg-blue-800 rounded" >Signup</button> */}
+
+        <Link href="/Signup.js">
+          <button className="px-4 py-2 text-white bg-green-500 rounded">
+            Signup
+          </button>
+        </Link>
+
+        <button className="px-4 py-2 text-white bg-purple-500 rounded">Signin</button>
+        <button className="px-4 py-2 text-white bg-orange-400 rounded">Upload Image</button>
+      </div>
+    </nav>
     <main>
     <h1 className="bg-blue-500 mt-2 text-white font-serif fontsize-4 text-center">File Upload</h1>
     <form className="bg-blue-300"onSubmit={onSubmit}>
@@ -32,6 +49,7 @@ function page() {
     </form>
    
   </main>
+  </div>
   )
 }
 

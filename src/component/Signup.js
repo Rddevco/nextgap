@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Navbar from './Navbar';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -48,8 +49,8 @@ const Signup = () => {
     }
 
     // Handle form submission, validation, and API calls here
-    console.log(formData);
-    // Clear form data or redirect after successful signup
+   console.log(formData);
+    
   };
 
   return (
@@ -162,5 +163,5 @@ const Signup = () => {
   </div>
 );
 };
-
+<Navbar/>
 export default Signup
