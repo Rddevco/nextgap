@@ -1,13 +1,19 @@
-"use client"
+import HomePage from "@/component/HomePage";
+import Navbar from "@/component/Navbar";
 
-import Signup from "@/component/Signup";
+
 
 
      export default function Home() {
 
     
   return (
-  <Signup />
+  
+   <div>
+      <Navbar/>
+      <HomePage/>
+   </div>
+
   );
 
     }

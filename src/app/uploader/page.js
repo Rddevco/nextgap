@@ -22,8 +22,8 @@ function page() {
   }
   return (
     <div>    {/* Navbar */}
-    <nav className="bg-blue-400 p-4 flex justify-between items-center">
-      <div className="text-white font-bold text-lg">NEXTAI</div>
+    <nav className="bg-white-400 p-4 flex justify-between items-center">
+      <div className="text-black font-bold text-lg">NEXTAI</div>
       <div className="space-x-4">
         {/* <button className="px-4 py-2 text-white bg-blue-800 rounded" >Signup</button> */}
 
@@ -34,12 +34,12 @@ function page() {
         </Link>
 
         <button className="px-4 py-2 text-white bg-purple-500 rounded">Signin</button>
-        <button className="px-4 py-2 text-white bg-orange-400 rounded">Upload Image</button>
+        <button className="px-4 py-2 text-white bg-orange-400 rounded">Upload File</button>
       </div>
     </nav>
     <main>
-    <h1 className="bg-blue-500 mt-2 text-white font-serif fontsize-4 text-center">File Upload</h1>
-    <form className="bg-blue-300"onSubmit={onSubmit}>
+    <h1 className="bg-white-500 mt-2 text-white font-serif fontsize-4 text-center">File Upload</h1>
+    <form className="bg-white-300"onSubmit={onSubmit}>
       <input type="file"
        name="file" 
        className="px-7 bg-color-orange"
@@ -47,8 +47,7 @@ function page() {
       />
       <button type="submit" className="px-3 py-3 mt-2 mb-2 bg-blue-900 text-white">upload file</button>
     </form>
-   
-  </main>
+   </main>
   </div>
   )
 }
