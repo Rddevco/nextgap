@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 
+//navbar describe
+
+
 function Navbar() {
   return (
     <nav className="bg-white-400 p-4 flex justify-between items-center">
