@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-//navbar describe
-
-
+// signin google auth
 function Navbar() {
   return (
     <nav className="bg-white-400 p-4 flex justify-between items-center">
