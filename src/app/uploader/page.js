@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 
-function page() {
+function Page() {
     const [file, setFile] = useState()
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -54,4 +54,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

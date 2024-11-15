@@ -1,8 +1,8 @@
-import Login from '@/component/Login'
-import Navbar from '@/component/Navbar'
+import Login from '@/components/Login'
+import Navbar from '@/components/Navbar'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
         <Navbar/>
@@ -11,4 +11,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

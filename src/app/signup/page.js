@@ -1,8 +1,8 @@
-import Navbar from '@/component/Navbar'
-import Signup from '@/component/Signup'
+import Navbar from '@/components/Navbar'
+import Signup from '@/components/Signup'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
         <Navbar/>
@@ -11,4 +11,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
