@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Authprovider from "@/components/Authprovider/Authprovider";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       >
         <Authprovider>
         {children}
+        <Toaster/>
         </Authprovider>
       </body>
     </html>

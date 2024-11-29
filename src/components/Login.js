@@ -1,9 +1,9 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 // import { signIn } from 'next-auth/react';
-import { useSession, signIn, signOut } from "next-auth/react"
-import Link from 'next/link';
+import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 // export default function Component() {
 //   const { data: session } = useSession()
@@ -20,20 +20,19 @@ import Link from 'next/link';
 // }
 
 function Login() {
-  const {data: session} = useSession()
+  const { data: session } = useSession();
   console.log(session);
-//   const router = useRouter();
+  //   const router = useRouter();
 
   // const handleGoogleLogin = () => {
 
-  //   signIn('google', { callbackUrl: '/' }); 
+  //   signIn('google', { callbackUrl: '/' });
   // };
 
   return (
-
-         <div id="test" className="bg-gray-50 font-[sans-serif]">
+    <div id="test" className="bg-gray-50 font-[sans-serif]">
       <div className="min-h-screen flex flex-col items-center justify-center py-6 px-4">
-        <div className="max-w-md w-full" id='.test'>
+        <div className="max-w-md w-full" id=".test">
           {/* <a href="javascript:void(0)">
             <img
               src="your-logo.png"
@@ -43,10 +42,14 @@ function Login() {
           </a> */}
 
           <div id="#test" className="p-8 rounded-2xl bg-white shadow">
-            <h2 className="text-gray-800 text-center text-2xl font-bold">Sign in</h2>
+            <h2 className="text-gray-800 text-center text-2xl font-bold">
+              Sign in
+            </h2>
             <form className="mt-8 space-y-4">
               <div>
-                <label className="text-gray-800 text-sm mb-2 block">User name</label>
+                <label className="text-gray-800 text-sm mb-2 block">
+                  User name
+                </label>
                 <div className="relative flex items-center">
                   <input
                     name="username"
@@ -63,7 +66,9 @@ function Login() {
               </div>
 
               <div>
-                <label className="text-gray-800 text-sm mb-2 block">Password</label>
+                <label className="text-gray-800 text-sm mb-2 block">
+                  Password
+                </label>
                 <div className="relative flex items-center">
                   <input
                     name="password"
@@ -80,8 +85,16 @@ function Login() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center">
-                  <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
-                  <label htmlFor="remember-me" className="ml-3 block text-sm text-gray-800">
+                  <input
+                    id="remember-me"
+                    name="remember-me"
+                    type="checkbox"
+                    className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  />
+                  <label
+                    htmlFor="remember-me"
+                    className="ml-3 block text-sm text-gray-800"
+                  >
                     Remember me
                   </label>
                 </div>
@@ -93,37 +106,50 @@ function Login() {
               </div>
 
               <div className="!mt-8">
-                <button type="button" id='btn' className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+                <button
+                  type="button"
+                  id="btn"
+                  className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+                >
                   Sign in
                 </button>
               </div>
-              <p className="text-gray-800 text-sm !mt-8 text-center">Do not have an account? <Link href="/signup" className="text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold">Register here</Link></p>
+              <p className="text-gray-800 text-sm !mt-8 text-center">
+                Do not have an account?{" "}
+                <Link
+                  href="/signup"
+                  className="text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold"
+                >
+                  Register here
+                </Link>
+              </p>
             </form>
 
             <div className="mt-6">
-              {
-                !session ?(<>
-                <button id='btn'
-                onClick={() =>signIn("google")} 
-                className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none"
-              >
-                Sign in with Google
-              </button>
-                </>) : (
-                  <button id='btn'
-                  onClick={()=> signOut()} 
+              {!session ? (
+                <>
+                  <button
+                    id="btn"
+                    onClick={() => signIn("google")}
+                    className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none"
+                  >
+                    Sign in with Google
+                  </button>
+                </>
+              ) : (
+                <button
+                  id="btn"
+                  onClick={() => signOut()}
                   className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none"
                 >
                   logout
                 </button>
-                )
-              }
+              )}
             </div>
           </div>
         </div>
       </div>
     </div>
-   
   );
 }
 

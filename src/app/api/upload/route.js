@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
   const data = await req.formData();
   const file = data.get('file');
-  // Check file
+
   if (!file) {
     return NextResponse.json({
       message: "File upload failed. No file found.",

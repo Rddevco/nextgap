@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Navbar from '@/components/Navbar'
 
 function Page() {
     const [file, setFile] = useState()
@@ -22,19 +23,20 @@ function Page() {
   }
   return (
     <div>    {/* Navbar */}
+    <Navbar/>
     <nav className="bg-white-400 p-4 flex justify-between items-center">
       <div className="text-black font-bold text-lg"></div>
       <div className="space-x-4">
         {/* <button className="px-4 py-2 text-white bg-blue-800 rounded" >Signup</button> */}
 
-        <Link href="/signup" className="px-4 py-2 text-white bg-green-500 rounded">
+        {/* <Link href="/signup" className="px-4 py-2 text-white bg-green-500 rounded">
               Signup
-        </Link>
-        <Link href="/login" className="px-4 py-2 text-white bg-purple-500 rounded">  
-      Login</Link>
-        <Link href="/uploader" className="px-4 py-2 text-white bg-orange-400 rounded">
+        </Link> */}
+        {/* <Link href="/login" className="px-4 py-2 text-white bg-purple-500 rounded">  
+      Login</Link> */}
+        {/* <Link href="/uploader" className="px-4 py-2 text-white bg-orange-400 rounded">
             Upload File
-      </Link>
+      </Link> */}
         {/* <button className="px-4 py-2 text-white bg-purple-500 rounded">Signin</button>
         <button className="px-4 py-2 text-white bg-orange-400 rounded">Upload File</button> */}
       </div>
